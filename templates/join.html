@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link href="{{url_for('static', filename = 'css/index.css')}}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+    <title>anom</title>
+</head>
+
+<body>
+    <main class="input-main">
+        <div class="input">
+            <form class="" action="/join" method="POST" accept-charset="utf-8">
+                <div class="">
+                    <label for="group">group</label>
+                    <input type="text" name="group" id="group" value="" /> {% if error == None %}
+                    <p></p>
+                    {% else %}
+                    <p>{{error}}</p>
+                    {% endif %}
+                </div>
+
+
+
+                <button type="submit" class="btn btn-dark">View Link</button>
+
+
+                <button type="button" class="btn btn-link"><a class="" href="/create">Create a group </a>
+</button>
+            </form>
+
+        </div>
+    </main>
+    <script src="js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+
+</html>
